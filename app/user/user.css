@@ -1,0 +1,19 @@
+.user {
+  text-align: center;
+  margin-bottom: 20%;
+}
+
+  .user .name {
+    text-align: center;
+    font-size: 21pt;
+    border: solid 1px #e5e5e5;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    width: 68px;
+    margin: 0 auto;
+  }
+
+  .user .image {
+    font-size: 50pt;
+    margin-top: 5px;
+  }

@@ -1,0 +1,117 @@
+.card {
+  -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+  -moz-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  border: solid 1px;
+  height: 90px;
+  width: 19%;
+  font-size: 18pt;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+  .card.different {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+
+  .card.equal {
+    background-color: #ccc5b3;
+    border-color: #696969;
+  }
+
+  .card .content {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  }
+
+    .card .content h1,
+    .card .content h2,
+    .card .content span {
+      font-family: 'Josefin-Sans';
+      margin: 0;
+    }
+
+      .card .content span,
+      .card .content h1,
+      .card .content h2 > sup {
+        font-size: 31pt;
+        color: #0C0B13;
+      }
+
+    .card .mark,
+    .card .content .h2 {
+      font-size: 12px;
+      top: -2px;
+      left: 5px;
+      color: #ffffff;
+    }
+
+  .card .mark {
+    font-family: 'Josefin-Sans';
+    position: absolute;
+    font-weight: bold;
+    padding: inherit;
+    background-color: inherit;
+  }
+
+    .card .mark.upside-down {
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      top: auto;
+      left: auto;
+      color: #E1623F;
+      bottom: -2px;
+      right: 5px;
+    }
+
+      .card .mark.upside-down:after {
+        color: #CCC5B3;
+      }
+
+.card-back,
+.card-front {
+  height: 215px;
+  width: 145px;
+}
+
+  .card-back .content h1,
+  .card-back .content h2 {
+    font-size: 17pt;
+    line-height: 25px;
+  }
+
+    .card-back .content h2 > sup {
+      font-size: 11pt;
+      top: -0.3em;
+    }
+
+  .card-front .mark {
+    font-size: 19pt;
+    top: 0px;
+    left: 10px;
+  }
+
+    .card-front .mark.upside-down {
+      bottom: 0px;
+      right: 10px;
+    }
+
+  .card-front .content span {
+    font-size: 90pt;
+  }

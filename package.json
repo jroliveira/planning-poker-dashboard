@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "postinstall": "jspm install & tsd reinstall -s -o",
+    "setup": "npm install -g jspm typings && npm install"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.3",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.3",
+      "rxjs": "npm:rxjs@^5.0.0-beta.1",
+      "zone.js": "npm:zone.js@^0.5.13"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
+  }
+}

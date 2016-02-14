@@ -1,0 +1,32 @@
+.login {
+  min-width: 250px;
+  padding: 14px 14px 0;
+  overflow: hidden;
+}
+
+  .login .help-block {
+    font-size: 12px;
+  }
+
+  .login .bottom {
+    background-color: rgba(255, 255, 255, .8);
+    border-top: 1px solid #ddd;
+    clear: both;
+    padding: 14px;
+  }
+
+  .login .form-group {
+    margin-bottom: 10px;
+  }
+
+@media (max-width:768px) {
+  .login {
+    background-color: inherit;
+    color: #fff;
+  }
+
+    .login .bottom {
+      background-color: inherit;
+      border-top: 0 none;
+    }
+}
