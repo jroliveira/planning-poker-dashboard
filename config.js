@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/scrum-poker/src",
+  baseURL: "/scrum-poker",
   defaultJSExtensions: true,
   transpiler: "typescript",
   typescriptOptions: {

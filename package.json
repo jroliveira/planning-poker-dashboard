@@ -29,15 +29,13 @@
     "socketio"
   ],
   "directories": {
-    "baseURL": "src",
-    "packages": "src/lib"
+    "packages": "lib"
   },
   "devDependencies": {},
   "dependencies": {},
   "jspm": {
     "directories": {
-      "baseURL": "src",
-      "packages": "src/lib"
+      "packages": "lib"
     },
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-beta.6",

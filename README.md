@@ -13,7 +13,7 @@ Dashboard da app mobile híbrida de scrum poker.
 ### How to use it
 
 * `http-serve`
-* `localhost:8080/scrum-poker/src/`
+* `localhost:8080/scrum-poker/`
 
 ### Contributions 
 
