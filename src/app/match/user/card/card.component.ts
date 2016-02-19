@@ -7,9 +7,9 @@ import {Card} from './card';
 })
 
 @View({
-  templateUrl: './app/user/card/card.component.html',
+  templateUrl: './app/match/user/card/card.component.html',
   styleUrls: [
-    './app/user/card/card.component.css'
+    './app/match/user/card/card.component.css'
   ]
 })
 

@@ -8,9 +8,9 @@ import {CardComponent} from './card/card.component';
 })
 
 @View({
-  templateUrl: './app/user/user.component.html',
+  templateUrl: './app/match/user/user.component.html',
   styleUrls: [
-    './app/user/user.component.css'
+    './app/match/user/user.component.css'
   ],
   directives: [
     CardComponent

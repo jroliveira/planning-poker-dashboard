@@ -1,0 +1,13 @@
+<div *ngIf="connected">
+  <div class="row">
+    <div *ngFor="#user of users" class="col-xs-6 col-sm-3">
+      <user [user]="user"></user>
+    </div>
+  </div>
+
+  <div *ngIf="!users.length">
+    <div class="alert alert-warning text-center">
+      <strong>Heads up!</strong> No player in the room "{{room}}".
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import {Component, View} from 'angular2/core';
-import {SocketService} from './../socket-service';
+import {SocketService} from './../core/socket-service';
 
 @Component({
   selector: 'login'

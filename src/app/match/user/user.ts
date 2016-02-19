@@ -4,6 +4,7 @@ export class User {
   private _id: string;
   private _name: string;
   private _card: Card;
+  private _plays: number = 0;
 
   get id(): string {
     return this._id;
@@ -16,14 +17,31 @@ export class User {
   get card(): Card {
     return this._card;
   }
-
+  
+  get played(): boolean {
+    return this._plays > 0;
+  }
+  
   constructor(id: string, name: string) {
     this._id = id;
     this._name = name;
   }
 
-  reveal(points: number) {
+  reveal(points: number): void {
+    this._plays++;
+    
     const card = new Card(points);
     this._card = card;
+  }
+  
+  show(): void {
+    this._plays = 0;
+    this._card.show();
+  }
+  
+  hide(): void {
+    if (!this.played) {
+      this._card = null;
+    }
   }
 }

@@ -23,4 +23,4 @@ Dashboard da app mobile híbrida de scrum poker.
 4. git push origin <branch-name>
 5. Create a pull request
 
-[logo]: https://raw.githubusercontent.com/jroliveira/scrum-poker/master/logo.png "Scrum Poker (dashboard) - Logo"
+[logo]: https://raw.githubusercontent.com/jroliveira/scrum-poker/gh-pages/logo.png "Scrum Poker (dashboard) - Logo"
