@@ -1,6 +1,6 @@
 import {Component, View} from 'angular2/core';
 import {User} from './user';
-import {CardComponent} from './card/card.component';
+import {CardComponent} from './../card/card.component';
 
 @Component({
   selector: 'user',
@@ -8,9 +8,9 @@ import {CardComponent} from './card/card.component';
 })
 
 @View({
-  templateUrl: './app/match/user/user.component.html',
+  templateUrl: './app/user/user.component.html',
   styleUrls: [
-    './app/match/user/user.component.css'
+    './app/user/user.component.css'
   ],
   directives: [
     CardComponent
@@ -18,5 +18,5 @@ import {CardComponent} from './card/card.component';
 })
 
 export class UserComponent {
-  user: User;
+
 }

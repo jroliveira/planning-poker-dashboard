@@ -1,9 +1,9 @@
 <div *ngIf="card && card.shown" class="card card-front equal">
-  <div class="mark">{{card.points}}</div>
+  <div class="mark">{{card.value}}</div>
   <div class="content">
-    <span>{{card.points}}</span>
+    <span>{{card.value}}</span>
   </div>
-  <div class="mark upside-down">{{card.points}}</div>
+  <div class="mark upside-down">{{card.value}}</div>
 </div>
 
 <div *ngIf="!card || !card.shown" class="card card-back equal">

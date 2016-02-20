@@ -1,8 +1,9 @@
 import {Component, View} from 'angular2/core';
-import {User} from './user/user';
-import {Users} from './user/users';
+import {Card} from './../card/card';
+import {User} from './../user/user';
+import {Group} from './../group/group';
 import {Match} from './match';
-import {UserComponent} from './user/user.component';
+import {GroupComponent} from './../group/group.component';
 import {SocketService} from './../core/socket-service';
 
 @Component({
@@ -11,11 +12,8 @@ import {SocketService} from './../core/socket-service';
 
 @View({
   templateUrl: './app/match/match.component.html',
-  styleUrls: [
-    './app/match/match.component.css'
-  ],
   directives: [
-    UserComponent
+    GroupComponent
   ],
   providers: [
     SocketService
@@ -25,6 +23,10 @@ import {SocketService} from './../core/socket-service';
 export class MatchComponent {
   private _socket: SocketIOClient.Socket;
   private _match: Match;
+  
+  get groups(): Group[] {
+    return this._match.groups;
+  }
   
   get users(): User[] {
     return this._match.users;
@@ -36,6 +38,10 @@ export class MatchComponent {
   
   get connected(): boolean {
     return !!this._match;
+  }
+  
+  get finished(): boolean {
+    return this._match.finished;
   }
   
   constructor(socketService: SocketService) {
@@ -66,6 +72,7 @@ export class MatchComponent {
   };
 
   private cardRevealed = (data: any) => {
-    this._match.revealCard(data.userId, data.points);
+    let card = new Card(data.points);
+    this._match.revealCard(data.userId, card);
   };
 }

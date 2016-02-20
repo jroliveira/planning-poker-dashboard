@@ -1,5 +1,4 @@
 import {Component, View} from 'angular2/core';
-import {User} from './match/user/user';
 import {MatchComponent} from './match/match.component';
 import {LoginComponent} from './login/login.component';
 import {SocketService} from './core/socket-service';
@@ -10,9 +9,6 @@ import {SocketService} from './core/socket-service';
 
 @View({
   templateUrl: './app/app.component.html',
-  styleUrls: [
-    './app/app.component.css'
-  ],
   directives: [
     LoginComponent,
     MatchComponent

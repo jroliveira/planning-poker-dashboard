@@ -1,13 +1,25 @@
 <div *ngIf="connected">
-  <div class="row">
-    <div *ngFor="#user of users" class="col-xs-6 col-sm-3">
-      <user [user]="user"></user>
+  <div *ngIf="!finished">
+    <div class="row">
+      <div *ngFor="#group of groups">
+        <group [group]="group"></group>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="finished">
+    <div *ngFor="#group of groups" class="row">
+      <group [group]="group"></group>
     </div>
   </div>
 
   <div *ngIf="!users.length">
-    <div class="alert alert-warning text-center">
-      <strong>Heads up!</strong> No player in the room "{{room}}".
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-warning text-center">
+          <strong>Heads up!</strong> No player in the room "{{room}}".
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,8 +1,8 @@
 export class Card {
-  private _points: number;
+  private _value: string;
   private _shown: boolean;
 
-  get points(): number {
+  get value(): number {
     return this._points;
   }
   

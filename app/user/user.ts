@@ -1,4 +1,4 @@
-import {Card} from './card/card';
+import {Card} from './../card/card';
 
 export class User {
   private _id: string;
@@ -27,10 +27,8 @@ export class User {
     this._name = name;
   }
 
-  reveal(points: number): void {
+  reveal(card: Card): void {
     this._plays++;
-    
-    const card = new Card(points);
     this._card = card;
   }
   

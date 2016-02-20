@@ -18,7 +18,7 @@
     </nav>
     <img src="app/logo.png" width="36" height="36" alt="Logo">
     <h3 class="text-muted">
-      <a href="/">Scrum Poker</a>
+      <a href="/scrum-poker">Scrum Poker</a>
     </h3>
   </div>
 </header>
@@ -27,8 +27,12 @@
   <match></match>
 
   <div *ngIf="!connected">
-    <div class="alert alert-info text-center">
-      <strong>Heads up!</strong> Please enter in a room to view players.
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-info text-center">
+          <strong>Heads up!</strong> Please enter in a room to view players.
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
