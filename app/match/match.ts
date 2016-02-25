@@ -59,6 +59,10 @@ export class Match {
   }
   
   addUser(user: User): void {
+    if (!user.name) {
+      return;
+    }
+    
     let group = this._groups['?'];
     group.addUser(user);
   }
