@@ -14,5 +14,5 @@ import {Card} from './card';
 })
 
 export class CardComponent {
-  card: Card;
+
 }

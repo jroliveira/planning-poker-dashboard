@@ -47,7 +47,7 @@ export class Match {
   constructor(room: string) {
     this._room = room;
     
-    this._current = 1;
+    this._current = 0;
     this._groups = {
       '?': new Group('?')
     };

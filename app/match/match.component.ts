@@ -12,6 +12,9 @@ import {SocketService} from './../core/socket-service';
 
 @View({
   templateUrl: './app/match/match.component.html',
+  styleUrls: [
+    './app/match/match.component.css'
+  ]
   directives: [
     GroupComponent
   ],
@@ -34,6 +37,10 @@ export class MatchComponent {
   
   get room(): string {
     return this._match.room;
+  }
+  
+  get current(): number{
+    return this._match.current;
   }
   
   get connected(): boolean {

@@ -1,4 +1,11 @@
 <div *ngIf="connected">
+  <h3>
+    CURRENT MATCH
+    <span class="label label-info">{{current}}</span>
+  </h3>
+
+  <hr />
+
   <div *ngIf="!finished">
     <div class="row">
       <div *ngFor="#group of groups">
@@ -8,7 +15,11 @@
   </div>
 
   <div *ngIf="finished">
-    <div *ngFor="#group of groups" class="row">
+    <div *ngFor="#group of groups; #i=index" class="row">
+      <div *ngIf="i > 0 && group.users.length" class="col-sm-12 text-center">
+        <h1><span  class="label label-default">X</span></h1>
+      </div>
+      
       <group [group]="group"></group>
     </div>
   </div>
