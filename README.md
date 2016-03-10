@@ -7,15 +7,16 @@ Dashboard da app mobile híbrida de scrum poker.
 ### Installing
 
 * `npm install http-server -g`
+* `npm install jspm -g`
 * `git clone https://github.com/jroliveira/scrum-poker.git`
-* `npm setup`
+* `npm install`
 
 ### How to use it
 
 * `http-serve`
 * `localhost:8080/scrum-poker/`
 
-### Contributions 
+### Contributions
 
 1. Fork it
 2. git checkout -b <branch-name>
@@ -23,4 +24,4 @@ Dashboard da app mobile híbrida de scrum poker.
 4. git push origin <branch-name>
 5. Create a pull request
 
-[logo]: https://raw.githubusercontent.com/jroliveira/scrum-poker/gh-pages/logo.png "Scrum Poker (dashboard) - Logo"
+[logo]: https://raw.githubusercontent.com/jroliveira/scrum-poker/master/logo.png "Scrum Poker (dashboard) - Logo"
