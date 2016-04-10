@@ -1,0 +1,14 @@
+<div *ngIf="card && card.shown" class="card card-front equal">
+  <div class="mark">{{card.value}}</div>
+  <div class="content">
+    <span>{{card.value}}</span>
+  </div>
+  <div class="mark upside-down">{{card.value}}</div>
+</div>
+
+<div *ngIf="!card || !card.shown" class="card card-back equal">
+  <div class="content">
+    <h1>PLANNING</h1>
+    <h2><sup>SCRUM</sup>POKER</h2>
+  </div>
+</div>

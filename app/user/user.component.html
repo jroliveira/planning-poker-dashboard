@@ -1,0 +1,5 @@
+<div *ngIf="user" class="user">
+  <div class="name">{{user.name}}</div>
+  <span class="glyphicon glyphicon-user image"></span>
+  <card [card]="user.card"></card>
+</div>

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: url('../fonts/Josefin-Sans.ttf.woff') format('woff'), 
+       url('../fonts/Josefin-Sans.ttf.svg#Josefin-Sans') format('svg'), 
+       url('../fonts/Josefin-Sans.ttf.eot'), 
+       url('../fonts/Josefin-Sans.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+}
+
+#push,
+footer {
+  height: 60px;
+}
+
+  footer .container div {
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  footer .credit {
+    margin: 20px 0;
+  }
+
+@media (max-width: 767px) {
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+  .header img,
+  .header h3 {
+    float: left;
+  }
+
+  .header h3 {
+    margin: 10px 0px 0px 10px;
+  }
+
+    .header h3 a,
+    .header h3 a:hover,
+    .header h3 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+}
