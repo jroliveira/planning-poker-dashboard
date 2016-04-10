@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>
-    Scrum Poker ~ Júnior Oliveira
+    Scrum Poker ~ Dashboard
   </title>
 
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="Júnior Oliveira">
-  <meta name="title" content=" Júnior Oliveira">
-  <meta name="description" content="Blog pessoal com assuntos dedicados a desenvolvimento de software nas linguagens de programação C Sharp, Delphi, ASP .NET, PHP e Javascript.">
-  <meta name="keywords" content="delphi, php, csharp">
+  <meta name="title" content="Scrum Poker">
+  <meta name="description" content="App de scrum poker.">
+  <meta name="keywords" content="scrum, planning, agile">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Júnior Oliveira">
-  <meta property="og:url" content="http://jroliveira.net">
-  <meta property="og:title" content=" Júnior Oliveira">
-  <meta property="og:description" content="Blog pessoal com assuntos dedicados a desenvolvimento de software nas linguagens de programação C Sharp, Delphi, ASP .NET, PHP e Javascript.">
+  <meta property="og:site_name" content="Scrum Poker">
+  <meta property="og:url" content="http://scrum-poker.github.io/scrum-poker-web">
+  <meta property="og:title" content="Scrum Poker">
+  <meta property="og:description" content="App de scrum poker.">
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
@@ -30,8 +30,31 @@
     <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" type="text/css" href="lib/github/twbs/bootstrap@3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="https://scrum-poker-api.herokuapp.com/socket.io/socket.io.js"></script>
+
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System
+      .import('app/main')
+      .then(null, console.error.bind(console));
+  </script>
 </head>
 
 <body>
@@ -62,15 +85,8 @@
     </div>
   </footer>
 
-  <script src="lib/system.js"></script>
-  <script src="config.js"></script>
-
-  <script>
-    System.import("app");
-  </script>
-
-  <script type="text/javascript" src="lib/npm/jquery@2.2.0/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="lib/github/twbs/bootstrap@3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

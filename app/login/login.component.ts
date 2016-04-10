@@ -1,26 +1,20 @@
-import {Component, View} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {SocketService} from './../core/socket-service';
 
 @Component({
-  selector: 'login'
-})
-
-@View({
+  selector: 'login',
   templateUrl: './app/login/login.component.html',
   styleUrls: [
     './app/login/login.component.css'
-  ],
-  providers: [
-    SocketService
   ]
 })
 
 export class LoginComponent {
-  private _socket: SocketIOClient.Socket;
+  private _socket: any;
   room: string = '';
 
-  constructor(socketService: SocketService) {
-    this._socket = socketService.socket;
+  constructor() {
+    this._socket = SocketService.getInstance();
   }
 
   login(room: string) {

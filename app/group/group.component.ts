@@ -1,13 +1,10 @@
-import {Component, View} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {Group} from './group';
 import {UserComponent} from './../user/user.component';
 
 @Component({
   selector: 'group',
-  inputs: ['group']
-})
-
-@View({
+  inputs: ['group'],
   templateUrl: './app/group/group.component.html',
   directives: [
     UserComponent
@@ -15,5 +12,5 @@ import {UserComponent} from './../user/user.component';
 })
 
 export class GroupComponent {
-  
+
 }

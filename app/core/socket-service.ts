@@ -1,15 +1,27 @@
-import {Injectable} from 'angular2/core';
-import * as io from 'socket.io-client';
-
-@Injectable()
 export class SocketService {
-  private _socket: SocketIOClient.Socket;
+  private _socket;
+  static instance: SocketService;
+  static isCreating: Boolean = false;
 
-  get socket(): SocketIOClient.Socket {
+  get socket(): any {
     return this._socket;
   }
 
   constructor() {
-    this._socket = io.connect('http://scrum-poker-api.herokuapp.com:80/');
+    if (!SocketService.isCreating) {
+      throw new Error("You can't call new in Singleton instances!");
+    }
+
+    this._socket = io.connect('https://scrum-poker-api.herokuapp.com/');
+  }
+
+  static getInstance() {
+    if (SocketService.instance == null) {
+      SocketService.isCreating = true;
+      SocketService.instance = new SocketService();
+      SocketService.isCreating = false;
+    }
+
+    return SocketService.instance._socket;
   }
 }
