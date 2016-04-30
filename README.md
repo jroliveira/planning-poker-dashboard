@@ -1,20 +1,20 @@
-# Scrum Poker (dashboard)
+# Planning Poker (dashboard)
 
-![Scrum Poker (dashboard) - Logo][logo]
+![Planning Poker (dashboard) - Logo][logo]
 
-Dashboard da app mobile híbrida de scrum poker.
+Dashboard da app mobile híbrida de planning poker.
 
 ### Installing
 
 * `npm install http-server -g`
 * `npm install jspm -g`
-* `git clone https://github.com/scrum-poker/scrum-poker-dashboard.git`
+* `git clone https://github.com/planning-poker/planning-poker-dashboard.git`
 * `npm install`
 
 ### How to use it
 
 * `http-serve`
-* `localhost:8080/scrum-poker-dashboard/`
+* `localhost:8080/planning-poker-dashboard/`
 
 ### Contributions
 
@@ -24,4 +24,4 @@ Dashboard da app mobile híbrida de scrum poker.
 4. git push origin <branch-name>
 5. Create a pull request
 
-[logo]: https://raw.githubusercontent.com/scrum-poker/scrum-poker-dashboard/master/logo.png "Scrum Poker (dashboard) - Logo"
+[logo]: https://raw.githubusercontent.com/planning-poker/planning-poker-dashboard/master/logo.png "Planning Poker (dashboard) - Logo"

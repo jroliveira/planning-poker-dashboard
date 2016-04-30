@@ -10,7 +10,7 @@ System.register([], function(exports_1, context_1) {
                     if (!SocketService.isCreating) {
                         throw new Error("You can't call new in Singleton instances!");
                     }
-                    this._socket = io.connect('https://scrum-poker-api.herokuapp.com/');
+                    this._socket = io.connect('http://api.planning-poker.io/');
                 }
                 Object.defineProperty(SocketService.prototype, "socket", {
                     get: function () {
