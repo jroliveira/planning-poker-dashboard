@@ -1,3 +1,5 @@
+declare var io: any;
+
 export class SocketService {
   private _socket;
   static instance: SocketService;
@@ -12,7 +14,7 @@ export class SocketService {
       throw new Error("You can't call new in Singleton instances!");
     }
 
-    this._socket = io.connect('https://scrum-poker-api.herokuapp.com/');
+    this._socket = io.connect('http://api.planning-poker.io/');
   }
 
   static getInstance() {

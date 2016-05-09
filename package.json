@@ -1,18 +1,17 @@
 {
-  "name": "scrum-poker-dashboard",
-  "version": "0.0.1",
-  "description": "Dashboard do app mobile híbrida de scrum poker",
-  "main": "dist/index.html",
-  "homepage": "https://github.com/scrum-poker/scrum-poker-dashboard#readme",
+  "name": "planning-poker-dashboard",
+  "version": "0.9.0",
+  "description": "Dashboard do app mobile híbrida de planning poker",
+  "main": "index.html",
+  "homepage": "http://dashboard.planning-poker.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scrum-poker/scrum-poker-dashboard.git"
+    "url": "git+https://github.com/planning-poker/planning-poker-dashboard.git"
   },
-  "bugs": "https://github.com/scrum-poker/scrum-poker-dashboard/issues",
+  "bugs": "https://github.com/planning-poker/planning-poker-dashboard/issues",
   "author": {
-    "name": "Junior Oliveira",
-    "email": "junolive@gmail.com",
-    "url": "http://jroliveira.net"
+    "name": "Planing Poker",
+    "url": "http://planning-poker.io"
   },
   "readmeFilename": "README.md",
   "scripts": {
