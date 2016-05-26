@@ -33,7 +33,7 @@ export class MatchComponent {
     return this._match.room;
   }
 
-  get current(): number{
+  get current(): number {
     return this._match.current;
   }
 
@@ -49,33 +49,31 @@ export class MatchComponent {
     this._socket = SocketService.getInstance();
 
     this._socket.on('joined', this.joined);
-    this._socket.on('user:joined', this.userJoined);
-    this._socket.on('user:left', this.userLeft);
-    this._socket.on('card:revealed', this.cardRevealed);
+    this._socket.on('user:joined', this.updateUsers);
+    this._socket.on('user:left', this.updateUsers);
+    this._socket.on('card:revealed', this.updateUsers);
   }
 
   private joined = (data: any) => {
     this._match = new Match(data.room);
+    this.updateUsers(data);
+  };
+
+  private updateUsers = (data: any) => {
+    this._match.users.forEach(user => {
+      this._match.removeUser(user.id);
+    });
 
     for (let id in data.users) {
-        if (data.users.hasOwnProperty(id)) {
-           let user = new User(id, data.users[id].name);
-           this._match.addUser(user);
-        }
+      let user = data.users[id];
+
+      let newUser = new User(id, user.name);
+      this._match.addUser(newUser);
+
+      if (user.card) {
+        let card = new Card(user.card.points);
+        this._match.revealCard(id, card);
+      }
     }
-  };
-
-  private userJoined = (data: any) => {
-    let user = new User(data.id, data.name);
-    this._match.addUser(user);
-  };
-
-  private userLeft = (data: any) => {
-    this._match.removeUser(data.id);
-  };
-
-  private cardRevealed = (data: any) => {
-    let card = new Card(data.points);
-    this._match.revealCard(data.userId, card);
   };
 }
